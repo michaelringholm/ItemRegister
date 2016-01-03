@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItemRegisterWeb", "ItemRegisterWeb\ItemRegisterWeb.csproj", "{611B267C-2215-49C4-AD2C-C1B6C94F77F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItemRegisterWeb.Tests", "ItemRegisterWeb.Tests\ItemRegisterWeb.Tests.csproj", "{C954B20B-CAEB-4C75-AB10-ADB6C8724ADE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "..\DAL\DAL.csproj", "{62231B66-7F70-4BC7-8E15-17C698849BE5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{611B267C-2215-49C4-AD2C-C1B6C94F77F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{611B267C-2215-49C4-AD2C-C1B6C94F77F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{611B267C-2215-49C4-AD2C-C1B6C94F77F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{611B267C-2215-49C4-AD2C-C1B6C94F77F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C954B20B-CAEB-4C75-AB10-ADB6C8724ADE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C954B20B-CAEB-4C75-AB10-ADB6C8724ADE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C954B20B-CAEB-4C75-AB10-ADB6C8724ADE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C954B20B-CAEB-4C75-AB10-ADB6C8724ADE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62231B66-7F70-4BC7-8E15-17C698849BE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62231B66-7F70-4BC7-8E15-17C698849BE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62231B66-7F70-4BC7-8E15-17C698849BE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62231B66-7F70-4BC7-8E15-17C698849BE5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

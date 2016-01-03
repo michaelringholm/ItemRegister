@@ -1,0 +1,5 @@
+Cykeldetektiven
+App ID:	284089591635942
+App Secret:	9720ce33c63a2637e2b4bca3d74d4ea8(nulstil)
+
+(edit icon)

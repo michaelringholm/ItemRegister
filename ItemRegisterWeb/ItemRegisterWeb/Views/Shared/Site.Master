@@ -1,0 +1,84 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+   <title>
+      <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+   </title>
+   <link href="/Content/Site.css" rel="stylesheet" type="text/css" />
+   <link rel="stylesheet" href="/Content/themes/base/jquery.ui.all.css" />
+
+   <script src="/Scripts/jquery-1.5.1.js" type="text/javascript"></script>
+
+   <script src="/Scripts/ui/jquery.ui.core.js"></script>
+
+   <script src="/Scripts/ui/jquery.ui.widget.js"></script>
+
+   <script src="/Scripts/ui/jquery.ui.position.js"></script>
+
+   <script src="/Scripts/ui/jquery.ui.autocomplete.js"></script>
+
+   <script src="/Scripts/ui/jquery.ui.dialog.js" type="text/javascript"></script>
+
+   <script src="/Scripts/ui/jquery.ui.mouse.js" type="text/javascript"></script>
+
+   <script src="/Scripts/ui/jquery.ui.draggable.js" type="text/javascript"></script>
+
+   <script src="/Scripts/ui/jquery.ui.resizable.js" type="text/javascript"></script>
+
+   <script src="/Scripts/ui/jquery.ui.datepicker.js" type="text/javascript"></script>
+
+   <script src="/Scripts/ui/jquery.effects.core.js" type="text/javascript"></script>
+
+   <script src="/Scripts/ui/jquery.effects.pulsate.js" type="text/javascript"></script>
+
+   <script src="/Scripts/ui/jquery.effects.explode.js" type="text/javascript"></script>
+
+   <script src="/Scripts/General.js" type="text/javascript"></script>
+
+   <script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript">
+   </script>
+   
+   <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+</head>
+<body>
+   <%if (Application["totalNumberOfBikesRegistered"] == null)
+        Application["totalNumberOfBikesRegistered"] = new DAL.DataClassesDataContext().items.Count(); %>
+   <div class="page">
+      <div id="header">
+         <div id="title">
+            <h1 style="float: left;">
+               Cykeldetektiven</h1>
+            <div style="float: left; margin-top: 34px; margin-left: 20px;">
+               (der er lige nu <span id="totalNumberOfBikesRegistered">
+                  <%=Application["totalNumberOfBikesRegistered"]%></span> cykler registreret)</div>
+         </div>
+         <div style="clear: both;">
+         </div>
+         <div style="height: 20px; margin-top: 88px; border-bottom: solid 1px #0D8E06;">
+            <div id="btnShowMyBikesControl" class="menuHeading" style="float: left; margin-left: 300px;">
+               Mine cykler</div>
+            <div id="btnShowFindBikeControl" class="menuHeading" style="float: left; margin-left: 40px;">
+               Find min cykel</div>
+            <div id="btnShowReportBikeControl" class="menuHeading" style="float: left; margin-left: 40px;">
+               Opret funden cykel</div>
+            <div id="facebookInfoControl" style="float: left; margin-left: 40px;">
+               </div>
+         </div>
+         <div id="logindisplay">
+            <% Html.RenderPartial("LogOnUserControl"); %>
+         </div>
+      </div>
+      <div id="main" style="height: 400px;">
+         <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+         <div id="errorMessageDiv" style="color: #000000; display: none; overflow: auto; width: 600px; height: 500px;">
+         </div>
+      </div>
+      <div id="footer" style="height: 40px; margin-top: 88px; border-top: solid 1px #0D8E06;">
+         <a name="fb_share">Del</a>
+         </div>
+      </div>
+   </div>
+</body>
+</html>
